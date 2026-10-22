@@ -7,7 +7,7 @@
 
 ## Overview
 
-JR-JIT is a minimalist Just-In-Time compiler for the [JohnRod](https://github.com/JohnRod/JohnRod) scripting language. It reuses JohnRod's frontend (lexer, parser, AST) and replaces the tree-walk interpreter with a direct x86-64 machine code emitter.
+JR-JIT is a minimalist Just-In-Time compiler for the [JohnRod](https://github.com/LambdaPhi-Foundation/JohnRod) scripting language. It reuses JohnRod's frontend (lexer, parser, AST) and replaces the tree-walk interpreter with a direct x86-64 machine code emitter.
 
 JohnRod variables with pipe-bound type annotations (`x|int`) map directly to hardware registers — no heap boxing, no `Rc<RefCell<Value>>` envelopes, no per-node AST traversal at runtime.
 
