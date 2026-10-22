@@ -1,0 +1,10 @@
+# Benchmark: compute sum of integers 0..N using a while loop
+# This tests: variable assignment, comparison, addition, branching
+
+[set n|int 1000000]
+[set i|int 0]
+[set sum|int 0]
+[while [lt i n]
+  [set sum [add sum i]]
+  [set i [add i 1]]]
+[println sum]

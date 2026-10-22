@@ -1,0 +1,23 @@
+[package]
+name = "jrodjit"
+version = "0.1.0"
+edition = "2021"
+authors = ["JohnRod Contributors"]
+description = "High-performance JIT compiler for the JohnRod language (Windows x64)"
+
+[dependencies]
+rustc-hash = "2.0"
+indexmap = "2.6"
+windows-sys = { version = "0.52", features = ["Win32_Foundation", "Win32_System_Memory", "Win32_System_LibraryLoader"] }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.bench]
+opt-level = 3
+lto = "fat"
+codegen-units = 1

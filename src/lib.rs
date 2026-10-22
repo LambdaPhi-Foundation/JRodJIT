@@ -1,0 +1,24 @@
+pub mod ast;
+pub mod env;
+pub mod ffi;
+pub mod ir;
+pub mod jit;
+pub mod lexer;
+pub mod mem;
+pub mod parser;
+pub mod runtime;
+pub mod token;
+pub mod value;
+pub mod codegen;
+
+pub use ast::{dump_ast, Expr, ExprKind};
+pub use env::Environment;
+pub use ffi::CLibrary;
+pub use ir::*;
+pub use jit::JITCompiler;
+pub use lexer::tokenize;
+pub use mem::ExecBuffer;
+pub use parser::parse;
+pub use runtime::{jr_print_bool, jr_print_float, jr_print_int, jr_print_ptr};
+pub use token::{Token, TokenType};
+pub use value::Value;
